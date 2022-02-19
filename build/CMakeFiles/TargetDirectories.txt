@@ -1,0 +1,3 @@
+/home/szymon/code/projects/arkanoid-simulation/build/CMakeFiles/rebuild_cache.dir
+/home/szymon/code/projects/arkanoid-simulation/build/CMakeFiles/simulation.dir
+/home/szymon/code/projects/arkanoid-simulation/build/CMakeFiles/edit_cache.dir
