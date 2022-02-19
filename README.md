@@ -24,7 +24,7 @@ git clone https://github.com/sgol13/arkanoid-simulation.git
 cd arkanoid-simulation
 ```
 
-Then you can use a prepared bash script to compile and run a simulation.
+Then you can use a prepared bash script to compile and run the program.
 ```
 ./run
 ```
