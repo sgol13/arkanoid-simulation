@@ -3,7 +3,7 @@ project(arkanoid-simulation)
 
 set (CMAKE_CXX_STANDARD 14)
 
-# set(CMAKE_CXX_FLAGS "-Wall -Wconversion -Wextra -Wshadow -Werror -g")
+set(CMAKE_CXX_FLAGS "-Wall -Wconversion -Wextra -Wshadow -Werror -g")
 
 
 add_executable(simulation 

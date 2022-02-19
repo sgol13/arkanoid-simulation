@@ -6,7 +6,6 @@
 //=================================================================================
 // WALL
 
-// constructor
 Wall::Wall() {
     bricks.resize(BOARD_HEIGHT);
     for (auto &row : bricks)

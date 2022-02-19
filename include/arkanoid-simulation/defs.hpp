@@ -31,8 +31,8 @@ constexpr int MULTIPLY_TIME = 12;
 constexpr chrono::milliseconds PLAYER_MOVE_TIME(MULTIPLY_TIME * 5);
 constexpr chrono::milliseconds BALL_MOVE_TIME(MULTIPLY_TIME * 3);
 
-constexpr int MIN_HANG_AROUND = 20; // 20
-constexpr int MAX_HANG_AROUND = 80; // 80
+constexpr int MIN_HANG_AROUND = 20;
+constexpr int MAX_HANG_AROUND = 80;
 
 constexpr int CHANGE_DIR_MIN_TIME = 20;
 constexpr int CHANGE_DIR_MAX_TIME = 50;

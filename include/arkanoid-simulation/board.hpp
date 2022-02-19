@@ -16,10 +16,8 @@ class Board {
     vector<Player> players;
 
   public:
-    // constructor
     Board();
 
-    // starts the simulation
     void simulation();
 };
 

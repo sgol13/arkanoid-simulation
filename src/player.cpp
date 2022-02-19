@@ -74,21 +74,26 @@ void Player::run() {
 
             // check ball
             if (!my_ball)
-                for (int i = 0; i < balls.size(); i++)
-                    if (balls[i].x == x && balls[i].m.try_lock()) {
-                        my_ball = &balls[i];
+
+                for (auto &ball : balls) {
+                    if (ball.x == x && ball.m.try_lock()) {
+                        my_ball = &ball;
                         my_ball->remove();
                         break;
                     }
+                }
+
 
             // check paddle
             if (!my_paddle)
-                for (int i = 0; i < paddles.size(); i++)
-                    if (paddles[i].x == x && paddles[i].m.try_lock()) {
-                        my_paddle = &paddles[i];
+
+                for (auto &paddle : paddles) {
+                    if (paddle.x == x && paddle.m.try_lock()) {
+                        my_paddle = &paddle;
                         my_paddle->remove();
                         break;
                     }
+                }
         }
 
         if (my_ball && my_paddle) {
@@ -147,7 +152,8 @@ void Player::run() {
             my_ball = nullptr;
 
             // put the paddle away
-            int moves = random(PUT_AWAY_MIN_TIME, PUT_AWAY_MAX_TIME);
+            moves = random(PUT_AWAY_MIN_TIME, PUT_AWAY_MAX_TIME);
+
             while (moves--) {
                 move();
                 if (finish_flag) {

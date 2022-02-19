@@ -1,7 +1,6 @@
 // Szymon Golebiowski
 // Arkanoid Simulation
 
-
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
 
@@ -21,20 +20,15 @@ class Player {
     Ball *my_ball = nullptr;
     Paddle *my_paddle = nullptr;
 
-    // constructor
     Player(Wall &_wall, array<Ball, N_BALLS> &_balls,
            array<Paddle, N_PADDLES> &_paddles);
 
-    // draws the paddle at the  current position
     void draw();
 
-    // removes the paddle
     void remove();
 
-    // moves one tile
     void move();
 
-    // simulates the activity of a player
     void run();
 };
 

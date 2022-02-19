@@ -15,7 +15,6 @@ class Wall {
     mutex m;
 
   public:
-    // constructor
     Wall();
 
     // removes the brick from a given position (from the memory and from the screen)

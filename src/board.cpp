@@ -3,7 +3,6 @@
 
 #include "arkanoid-simulation/board.hpp"
 
-// constructor
 Board::Board() {
 
     // print the frame
@@ -37,11 +36,13 @@ Board::Board() {
 
 // starts the simulation
 void Board::simulation() {
-    vector<thread> threads;
-    for (int i = 0; i < players.size(); i++)
-        threads.push_back(thread(&Player::run, &players[i]));
 
-    char character = 0;
+    vector<thread> threads;
+
+    for (auto &player : players)
+        threads.push_back(thread(&Player::run, &player));
+
+    int character = 0;
     while (character != 'f')
         character = getch();
 

@@ -16,7 +16,8 @@ chrono::milliseconds randomTime(int a, int b) {
 int random(int a, int b) { return (rand() % (b - a + 1)) + a; }
 
 int main() {
-    srand(time(NULL));
+
+    srand(static_cast<unsigned int>(time(0)));
 
     initscr();
     noecho();
