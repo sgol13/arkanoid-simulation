@@ -10,6 +10,7 @@ Player::Player(Wall &_wall, array<Ball, N_BALLS> &_balls,
 
 // draws the player at the current position
 void Player::draw() {
+
     lock_guard<mutex> temp_lock(lock_screen);
     mvprintw(BOARD_HEIGHT, x, "M");
     if (my_ball)
@@ -21,6 +22,7 @@ void Player::draw() {
 
 // removes the ball
 void Player::remove() {
+
     lock_guard<mutex> temp_lock(lock_screen);
     mvprintw(BOARD_HEIGHT, x, "_");
     if (my_ball)
@@ -32,6 +34,7 @@ void Player::remove() {
 
 // moves one tile
 void Player::move() {
+
     this_thread::sleep_for(PLAYER_MOVE_TIME);
     remove();
     if (x + direction == 0 || x + direction == BOARD_WIDTH) {
@@ -48,6 +51,7 @@ void Player::move() {
 
 // simulates the activity of a player
 void Player::run() {
+
     direction = (rand() % 2) ? 1 : -1;
 
     while (!finish_flag) {

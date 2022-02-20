@@ -27,7 +27,6 @@ int main() {
     arkanoid.simulation();
 
     refresh();
-
     endwin();
     return 0;
 }

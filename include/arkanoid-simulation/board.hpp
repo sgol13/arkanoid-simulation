@@ -21,6 +21,4 @@ class Board {
     void simulation();
 };
 
-
-
 #endif

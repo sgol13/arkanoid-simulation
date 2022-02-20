@@ -7,6 +7,7 @@
 // WALL
 
 Wall::Wall() {
+
     bricks.resize(BOARD_HEIGHT);
     for (auto &row : bricks)
         row.resize(BOARD_WIDTH, false);
@@ -20,6 +21,7 @@ Wall::Wall() {
 
 // removes the brick from a given position (from the memory and from the screen)
 bool Wall::hit(int y, int x) {
+
     lock_guard<mutex> temp_wall_lock(m);
     if (bricks[y][x]) {
         bricks[y][x] = false;
